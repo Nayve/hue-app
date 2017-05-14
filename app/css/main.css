@@ -1,0 +1,84 @@
+.light {
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid transparent; }
+  .light-on {
+    background: yellow; }
+  .light-off {
+    background: darkred; }
+  .light-white {
+    border-color: cornflowerblue; }
+  .light-ambiance {
+    border-color: orange; }
+  .light-color {
+    border-color: rebeccapurple; }
+
+.appartment {
+  position: relative;
+  width: 500px;
+  margin: 20px; }
+
+.room {
+  position: absolute;
+  border: 3px solid #000; }
+
+.inner-room {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.livingroom {
+  height: 500px;
+  width: 300px;
+  top: 0;
+  left: 0; }
+
+.bedroom {
+  height: 300px;
+  width: 200px;
+  top: 0;
+  left: 300px; }
+
+.kitchen {
+  height: 175px;
+  width: 200px;
+  top: 500px;
+  left: 0; }
+
+.office {
+  height: 175px;
+  width: 225px;
+  top: 675px;
+  left: 0; }
+
+.hallway {
+  display: none;
+  height: 500px;
+  width: 300px; }
+
+.toilet {
+  height: 75px;
+  width: 50px;
+  top: 500px;
+  left: 200px; }
+
+.bathroom {
+  height: 125px;
+  width: 150px;
+  top: 300px;
+  right: 0; }
+
+.light-13 {
+  position: absolute;
+  right: 0; }
+
+.groups-container li {
+  list-style: none; }
+
+.btn {
+  margin: 20px;
+  transition: .5s background-color linear; }
+  .btn:focus {
+    outline: none; }

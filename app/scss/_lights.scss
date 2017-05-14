@@ -1,0 +1,38 @@
+.light {
+
+    $size: 50px;
+
+    background: #fff;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    border: 5px solid transparent;
+
+    &-on {
+        background: yellow;
+    }
+
+    &-off {
+        background: darkred;
+    }
+
+    &-white {
+        border-color: cornflowerblue;
+    }
+
+    &-ambiance {
+        border-color: orange;
+    }
+
+    &-color {
+        border-color: rebeccapurple;
+    }
+
+    &-bulb {
+        
+    }
+
+    &-spot {
+
+    }
+}

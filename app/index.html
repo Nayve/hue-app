@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hueApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css"></link>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./app.js"></script>
+</head>
+<body>
+
+    <div ng-controller="HueController" class="groups-container">
+
+        <ul class="appartment">
+            
+            <li ng-repeat="group in lightsGrouped | roomOnly"
+            class="room {{group.class}}">
+                
+                <div class="inner-room">
+                    
+                    <button class="btn" 
+                        ng-click="toggleLightGroup(group)"
+                        ng-class="{'btn-success': group.state.all_on, 'btn-info': !group.state.all_on && group.state.any_on}">
+                        {{group.name}}
+                    </button>
+
+                    <ul>
+                        <li ng-repeat="light in group.lights">
+                            <button class="light 
+                                        light-{{light.category.type}} 
+                                        light-{{light.category.socket}}
+                                        light-{{light.id}}"
+                                    ng-click="toggleLight(light)"
+                                    ng-class="light.state.on ? 'light-on' : 'light-off'">
+                                    <!--ng-class="{'light-on': light.state.on}">-->
+                                {{light.id}}
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </li>
+
+        </ul>
+
+    </div>
+    
+</body>
+</html>

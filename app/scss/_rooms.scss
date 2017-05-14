@@ -1,0 +1,98 @@
+
+
+$livingroom-height: 1000px / 2;
+$livingroom-width: 600px / 2;
+
+$bedroom-height: 600px / 2;
+$bedroom-width: 400px / 2;
+
+$kitchen-height: 350px / 2;
+$kitchen-width: 400px / 2;
+
+$office-height: 350px / 2;
+$office-width: 450px / 2;
+
+$toilet-height: 150px / 2;
+$toilet-width: 100px / 2;
+
+$bathroom-height: 250px / 2;
+$bathroom-width: 300px / 2;
+
+
+.appartment {
+    position: relative;
+    width: $livingroom-width + $bedroom-width;
+    margin: 20px;
+}
+
+.room {
+    position: absolute;
+    border: 3px solid #000;
+}
+
+.inner-room {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.livingroom {
+    height: $livingroom-height;
+    width: $livingroom-width;
+
+    top: 0;
+    left: 0;
+}
+
+.bedroom{
+    height: $bedroom-height;
+    width: $bedroom-width;
+
+    top: 0;
+    left: $livingroom-width;
+}
+
+.kitchen{
+    height: $kitchen-height;
+    width: $kitchen-width;
+
+    top: $livingroom-height;
+    left: 0;
+}
+
+.office{
+    height: $office-height;
+    width: $office-width;
+
+    top: $livingroom-height + $kitchen-height;
+    left: 0;
+}
+
+.hallway{
+    display: none;
+    height: $livingroom-height;
+    width: $livingroom-width;
+}
+
+.toilet{
+    height: $toilet-height;
+    width: $toilet-width;
+
+    top: $livingroom-height;
+    left: $kitchen-width;
+}
+
+.bathroom{
+    height: $bathroom-height;
+    width: $bathroom-width;
+
+    top: $bedroom-height;
+    right: 0;
+}
+
+.light-13 {
+    position: absolute;
+    right: 0;
+}
+
+
